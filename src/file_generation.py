@@ -5,9 +5,9 @@ from split_nodes import markdown_to_html_node
 
 def copy_static():
     print(os.getcwd())
-    if os.path.exists("./public"):
-        shutil.rmtree("./public")
-        shutil.copytree("./static","./public")
+    if os.path.exists("./docs"):
+        shutil.rmtree("./docs")
+        shutil.copytree("./static","./docs")
 
 def extract_title(markdown):
     lines = markdown.split("\n")
