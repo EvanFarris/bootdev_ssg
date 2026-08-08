@@ -35,8 +35,8 @@ def generate_page(from_path, template_path, dest_path, basepath="/"):
     print(test2)
     result = template_content.replace("{{ Title }}", title)
     result = result.replace("{{ Content }}", htmlstr)
-    #result = result.replace("href=\"/", test1)
-    #result = result.replace("src=\"/", test2)
+    result = result.replace("href=\"/", test1)
+    result = result.replace("src=\"/", test2)
     pathonly = dest_path.split("/")
     pathonly = pathonly[:-1]
     pathonly = "/".join(pathonly)
