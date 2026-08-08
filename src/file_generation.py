@@ -29,10 +29,14 @@ def generate_page(from_path, template_path, dest_path, basepath="/"):
     htmlstr = markdown_to_html_node(from_content).to_html()
 
     title = extract_title(from_content)
+    test1 = f"href=\"{basepath}"
+    test2 = f"src=\"{basepath}"
+    print(test1)
+    print(test2)
     result = template_content.replace("{{ Title }}", title)
     result = result.replace("{{ Content }}", htmlstr)
-    #result = result.replace("href=\"/", f"href=\"{basepath}")
-    #result = result.replace("src=\"/", f"src=\"{basepath}")
+    result = result.replace("href=\"/", test1)
+    result = result.replace("src=\"/", test2)
     pathonly = dest_path.split("/")
     pathonly = pathonly[:-1]
     pathonly = "/".join(pathonly)
