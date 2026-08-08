@@ -7,7 +7,7 @@ def main():
     if len(sys.argv) == 1:
         basepath = "/"
     else:
-        basepath = sys.argv[1].strip() + "/"
+        basepath = "/" + sys.argv[1].strip() + "/"
 
     testNode = TextNode("This is some anchor text", TextType["LINK"], "https://www.boot.dev")
     copy_static()
